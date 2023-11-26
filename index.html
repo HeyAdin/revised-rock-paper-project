@@ -29,21 +29,76 @@
             }
             return choice;
         }
-        console.log(getComputerChoice());
+        // console.log(getComputerChoice());
 
         // User's Choice
         function getUserChoice() {
             let usersChoice = prompt("Enter your choce", "Rock").toLowerCase();
-            if (usersChoice === "rock" || usersChoice === "paper" || usersChoice === "scissors") {
+            if (usersChoice === "rock" || usersChoice === "paper" || usersChoice === "scissor") {
                 return usersChoice;
             }
-            else{
+            else {
                 return undefined;
             }
         }
-        console.log(getUserChoice());
+        // console.log(getUserChoice());
 
-        
+        // Lets start the Game
+        let userChoice = getUserChoice();
+        let computerChoice = getComputerChoice();
+
+        function playGame(userChoice, computerChoice) {
+            if (userChoice == undefined) {   // this if condition block of code make sure that user input is valid if not it will alert and again wait for input 
+                alert("Please choose between Rock,Paper and Scissor");
+                userChoice;
+                while (userChoice == undefined) {
+                    userChoice = prompt("Enter your choce", "Rock").toLowerCase();
+                    if (userChoice == "rock" || userChoice == "paper" || userChoice == "scissor") {
+
+                    }
+                    else {
+                        userChoice = undefined;
+                        alert("Please choose between Rock,Paper and Scissor");
+                    }
+                }
+            }
+            else if (computerChoice === userChoice) {
+                alert("Computer and You have same sort of mind");
+                console.log("Computer choice is  " + computerChoice);
+                console.log("Your Choice is  " + userChoice);
+            }
+            else if (computerChoice == "rock" && userChoice == "paper") {
+                alert("You gotta sharp mind, You won!");
+                console.log("Computer choice is  " + computerChoice);
+                console.log("Your Choice is  " + userChoice);
+            }
+            else if (computerChoice == "paper" && userChoice == "rock") {
+                alert("You need to sharp your mind, You lose!");
+                console.log("Computer choice is  " + computerChoice);
+                console.log("Your Choice is  " + userChoice);
+            }
+            else if (computerChoice == "rock" && userChoice == "scissor") {
+                alert("You need to sharp your mind, You lose!");
+                console.log("Computer choice is  " + computerChoice);
+                console.log("Your Choice is  " + userChoice);
+            }
+            else if (computerChoice == "scissor" && userChoice == "rock") {
+                alert("You gotta sharp mind, You won!");
+                console.log("Computer choice is  " + computerChoice);
+                console.log("Your Choice is  " + userChoice);
+            }
+            else if (computerChoice == "paper" && userChoice == "scissor") {
+                alert("You gotta sharp mind, You won!");
+                console.log("Computer choice is  " + computerChoice);
+                console.log("Your Choice is  " + userChoice);
+            }
+            else {
+                alert("You need to sharp your mind, You lose!");
+                console.log("Computer choice is  " + computerChoice);
+                console.log("Your Choice is  " + userChoice);
+            }
+        }
+        playGame(userChoice, computerChoice);
     </Script>
 </body>
 
