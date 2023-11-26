@@ -9,6 +9,42 @@
 
 <body>
 
+    <Script>
+        // ROCK PAPER SCISSORS
+
+        // Computer's Choice
+        function getComputerChoice() {
+            // generate a random no each time when function is invoked
+            let choice = Math.random() * 100;
+            choice = Math.floor(choice);
+            // Decide by choice whether it is rock, paper or scissor
+            if (choice < 33) {
+                choice = "rock";
+            }
+            else if (choice > 33 && choice <= 66) {
+                choice = "paper";
+            }
+            else {
+                choice = "scissor";
+            }
+            return choice;
+        }
+        console.log(getComputerChoice());
+
+        // User's Choice
+        function getUserChoice() {
+            let usersChoice = prompt("Enter your choce", "Rock").toLowerCase();
+            if (usersChoice === "rock" || usersChoice === "paper" || usersChoice === "scissors") {
+                return usersChoice;
+            }
+            else{
+                return undefined;
+            }
+        }
+        console.log(getUserChoice());
+
+        
+    </Script>
 </body>
 
 </html>
