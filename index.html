@@ -29,7 +29,6 @@
             }
             return choice;
         }
-        // console.log(getComputerChoice());
 
         // User's Choice
         function getUserChoice() {
@@ -44,11 +43,15 @@
         // console.log(getUserChoice());
 
         // Lets start the Game
-        let userChoice = getUserChoice();
-        let computerChoice = getComputerChoice();
+        let computerScore =0;
+        let userScore=0;
+        let userChoice;
+        let computerChoice;
 
         function playGame(userChoice, computerChoice) {
-            if (userChoice == undefined) {   // this if condition block of code make sure that user input is valid if not it will alert and again wait for input 
+            userChoice = getUserChoice();
+            computerChoice = getComputerChoice();
+            if (userChoice == undefined) {   // this if condition block of code make sure that user input is valid, if not it will alert and again wait for input 
                 alert("Please choose between Rock,Paper and Scissor");
                 userChoice;
                 while (userChoice == undefined) {
@@ -66,39 +69,78 @@
                 alert("Computer and You have same sort of mind");
                 console.log("Computer choice is  " + computerChoice);
                 console.log("Your Choice is  " + userChoice);
+                computerScore += 1;
+                userScore += 1;
+
             }
             else if (computerChoice == "rock" && userChoice == "paper") {
                 alert("You gotta sharp mind, You won!");
                 console.log("Computer choice is  " + computerChoice);
                 console.log("Your Choice is  " + userChoice);
+                userScore += 1;
             }
             else if (computerChoice == "paper" && userChoice == "rock") {
                 alert("You need to sharp your mind, You lose!");
                 console.log("Computer choice is  " + computerChoice);
                 console.log("Your Choice is  " + userChoice);
+                computerScore += 1;
             }
             else if (computerChoice == "rock" && userChoice == "scissor") {
                 alert("You need to sharp your mind, You lose!");
                 console.log("Computer choice is  " + computerChoice);
                 console.log("Your Choice is  " + userChoice);
+                computerScore += 1;
             }
             else if (computerChoice == "scissor" && userChoice == "rock") {
                 alert("You gotta sharp mind, You won!");
                 console.log("Computer choice is  " + computerChoice);
                 console.log("Your Choice is  " + userChoice);
+                userScore += 1;
             }
             else if (computerChoice == "paper" && userChoice == "scissor") {
                 alert("You gotta sharp mind, You won!");
                 console.log("Computer choice is  " + computerChoice);
                 console.log("Your Choice is  " + userChoice);
+                userScore +=1;
             }
             else {
                 alert("You need to sharp your mind, You lose!");
                 console.log("Computer choice is  " + computerChoice);
                 console.log("Your Choice is  " + userChoice);
+                computerScore+=1;
             }
         }
-        playGame(userChoice, computerChoice);
+
+        function game() {
+            console.log("Round 1");
+            playGame(userChoice, computerChoice);
+            console.log("Round 2");
+            playGame(userChoice, computerChoice);
+            console.log("Round 3");
+            playGame(userChoice, computerChoice);
+            console.log("Round 4");
+            playGame(userChoice, computerChoice);
+            console.log("Round 5");
+            playGame(userChoice, computerChoice);
+        }
+        game();
+        
+        if (computerScore > userScore) {
+            console.log("Round 1");
+            alert("You are not supposed to live, Wanna play more Press F5");
+            console.log("User score = "+userScore + " Computer score = " + computerScore);
+            console.log("You are not supposed to live, Wanna play more Press F5");
+        }
+        else if (computerScore == userScore) {
+            alert("Tough competition it is, Can we do this Again? Press F5");
+            console.log("User score = "+userScore + " Computer score = " + computerScore);
+            console.log("Tough competition it is, Can we do this Again? Press F5");
+        }
+        else {
+            alert("Okay You won! Next match it wont");
+            console.log("User score = "+userScore + " Computer score = " + computerScore);
+            console.log("Okay You won! Next match it wont");
+        }
     </Script>
 </body>
 
