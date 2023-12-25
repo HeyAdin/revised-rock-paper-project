@@ -8,26 +8,46 @@
 </head>
 
 <body>
-    <div class="content">
-        <div class="buttons-sec">
-            <button class="buttons">ROCK</button>
-            <button class="buttons">PAPER</button>
-            <button class="buttons">SCISSORS</button>
-        </div>
-        <div class="results-sec">
+    <div class="container">
+        <h1>ROCK PAPER SCISSOR Khelega Kya?</h1>
+        <div class="content">
+            <div class="buttons-sec">
+                <button class="buttons">ROCK</button>
+                <button class="buttons">PAPER</button>
+                <button class="buttons">SCISSORS</button>
+            </div>
+            <div class="results-sec">
 
+            </div>
         </div>
     </div>
 
 
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        h1 {
+            font-size: 90px;
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background-color: rgb(132 169 169);
+            padding: 10px;
+            height:100vh;
+        }
         .content {
             background-color: rgb(132 169 169);
             display: flex;
-            width: 100vw;
-            height: 100vh;
-            margin: 0;
+            justify-content: space-around;
+            height: 70%;
             padding: 100px;
         }
 
@@ -43,6 +63,13 @@
             padding: 30px;
             color: rgb(87 213 81);
             background-color:rgb(124 138 153);
+        }
+
+        .results-sec {
+            width: 60%;
+            height: 100%;
+            border-radius: 20px;
+            background-color: rgb(219, 217, 217);
         }
 
     </style>
