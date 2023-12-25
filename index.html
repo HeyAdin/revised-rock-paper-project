@@ -8,7 +8,44 @@
 </head>
 
 <body>
+    <div class="content">
+        <div class="buttons-sec">
+            <button class="buttons">ROCK</button>
+            <button class="buttons">PAPER</button>
+            <button class="buttons">SCISSORS</button>
+        </div>
+        <div class="results-sec">
 
+        </div>
+    </div>
+
+
+
+    <style>
+        .content {
+            background-color: rgb(132 169 169);
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 100px;
+        }
+
+        .buttons-sec {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+        }
+
+        .buttons {
+            font-size: 30px;
+            padding: 30px;
+            color: rgb(87 213 81);
+            background-color:rgb(124 138 153);
+        }
+
+    </style>
     <Script>
         // ROCK PAPER SCISSORS
 
@@ -125,25 +162,28 @@
             playGame(userChoice, computerChoice);
         }
         // Calling the game function to play 5 times
-        game();
+
+        // game();
+
+
 
         // Comparison and declaration of result
-        if (computerScore > userScore) {
-            console.log("Round 1");
-            alert("You are not supposed to live, Wanna play more Press F5");
-            console.log("User score = " + userScore + " Computer score = " + computerScore);
-            console.log("You are not supposed to live, Wanna play more Press F5");
-        }
-        else if (computerScore == userScore) {
-            alert("Tough competition it is, Can we do this Again? Press F5");
-            console.log("User score = " + userScore + " Computer score = " + computerScore);
-            console.log("Tough competition it is, Can we do this Again? Press F5");
-        }
-        else {
-            alert("Okay You won! Next match it wont");
-            console.log("User score = " + userScore + " Computer score = " + computerScore);
-            console.log("Okay You won! Next match it wont");
-        }
+        // if (computerScore > userScore) {
+        //     console.log("Round 1");
+        //     alert("You are not supposed to live, Wanna play more Press F5");
+        //     console.log("User score = " + userScore + " Computer score = " + computerScore);
+        //     console.log("You are not supposed to live, Wanna play more Press F5");
+        // }
+        // else if (computerScore == userScore) {
+        //     alert("Tough competition it is, Can we do this Again? Press F5");
+        //     console.log("User score = " + userScore + " Computer score = " + computerScore);
+        //     console.log("Tough competition it is, Can we do this Again? Press F5");
+        // }
+        // else {
+        //     alert("Okay You won! Next match it wont");
+        //     console.log("User score = " + userScore + " Computer score = " + computerScore);
+        //     console.log("Okay You won! Next match it wont");
+        // }
     </Script>
 </body>
 
