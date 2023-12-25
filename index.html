@@ -43,8 +43,8 @@
         // console.log(getUserChoice());
 
         // Lets start the Game
-        let computerScore =0;
-        let userScore=0;
+        let computerScore = 0;
+        let userScore = 0;
         let userChoice;
         let computerChoice;
 
@@ -101,16 +101,17 @@
                 alert("You gotta sharp mind, You won!");
                 console.log("Computer choice is  " + computerChoice);
                 console.log("Your Choice is  " + userChoice);
-                userScore +=1;
+                userScore += 1;
             }
             else {
                 alert("You need to sharp your mind, You lose!");
                 console.log("Computer choice is  " + computerChoice);
                 console.log("Your Choice is  " + userChoice);
-                computerScore+=1;
+                computerScore += 1;
             }
         }
 
+        // 5 times playing function
         function game() {
             console.log("Round 1");
             playGame(userChoice, computerChoice);
@@ -123,22 +124,24 @@
             console.log("Round 5");
             playGame(userChoice, computerChoice);
         }
+        // Calling the game function to play 5 times
         game();
-        
+
+        // Comparison and declaration of result
         if (computerScore > userScore) {
             console.log("Round 1");
             alert("You are not supposed to live, Wanna play more Press F5");
-            console.log("User score = "+userScore + " Computer score = " + computerScore);
+            console.log("User score = " + userScore + " Computer score = " + computerScore);
             console.log("You are not supposed to live, Wanna play more Press F5");
         }
         else if (computerScore == userScore) {
             alert("Tough competition it is, Can we do this Again? Press F5");
-            console.log("User score = "+userScore + " Computer score = " + computerScore);
+            console.log("User score = " + userScore + " Computer score = " + computerScore);
             console.log("Tough competition it is, Can we do this Again? Press F5");
         }
         else {
             alert("Okay You won! Next match it wont");
-            console.log("User score = "+userScore + " Computer score = " + computerScore);
+            console.log("User score = " + userScore + " Computer score = " + computerScore);
             console.log("Okay You won! Next match it wont");
         }
     </Script>
